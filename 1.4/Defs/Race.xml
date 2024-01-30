@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<AlienRace.ThingDef_AlienRace ParentName="BasePawn">
+		<defName>Alien_Slugcat</defName>
+		<label>slugcat</label>
+		<description>A nimble and clever omnivore, both predator and prey. While most lack higher intelligence, some have been given sapience by benovolent archotechs.</description>
+		<!--Basic Settings-->
+		<alienRace>
+			<generalSettings>
+				<minAgeForAdulthood>4</minAgeForAdulthood>
+				<maleGenderProbability>0.5</maleGenderProbability>
+				<immuneToAge>false</immuneToAge>
+				<humanRecipeImport>true</humanRecipeImport>			
+				<allowHumanBios>true</allowHumanBios>
+				<alienPartGenerator>
+					<headTypes Inherit="False">
+						<li>Male_AverageNormal</li>
+						<li>Female_AverageNormal</li>
+					</headTypes>
+					<bodyTypes Inherit="False">>
+						<li>Male</li>
+						<li MayRequire="Ludeon.RimWorld.Biotech">Baby</li>
+						<li MayRequire="Ludeon.RimWorld.Biotech">Child</li>
+					</bodyTypes>
+					<customDrawSize>(0.8,0.8)</customDrawSize>
+					<customHeadDrawSize>(0.8,0.8)</customHeadDrawSize>
+					<customPortraitDrawSize>(1,1)</customPortraitDrawSize>
+					<customPortraitHeadDrawSize>(1,1)</customPortraitHeadDrawSize> 
+					<colorChannels Inherit="False">
+						<li>
+							<name>skin</name>
+							<first Class="ColorGenerator_Options">
+								<options>
+									<li>
+										<weight>100</weight>
+										<only>RGBA(255,255,255,255)</only>
+									</li>
+									<li>
+										<weight>80</weight>
+										<only>RGBA(255,255,127,255)</only>
+									</li>
+									<li>
+										<weight>50</weight>
+										<only>RGBA(230,195,150,255)</only>
+									</li>
+									<li>
+										<weight>25</weight>
+										<only>RGBA(230,125,120,255)</only>
+									</li>
+									<li>
+										<weight>25</weight>
+										<only>RGBA(160,200,240,255)</only>
+									</li>
+									<li>
+										<weight>20</weight>
+										<only>RGBA(100,45,60,255)</only>
+									</li>
+									<li>
+										<weight>20</weight>
+										<only>RGBA(75,50,100,255)</only>
+									</li>
+									<li>
+										<weight>15</weight>
+										<only>RGBA(190,240,100,255)</only>
+									</li>
+									<li>
+										<weight>5</weight>
+										<only>RGBA(25,35,80,255)</only>
+									</li>
+								</options>
+							</first>
+							<second Class="ColorGenerator_Options">
+								<options>
+									<li>
+										<weight>100</weight>
+										<only>RGBA(255,255,255,255)</only>
+									</li>
+								</options>
+							</second>
+						</li>
+					</colorChannels>
+				</alienPartGenerator>
+				<growthAges>
+				  <li>1</li>
+				  <li>2</li>
+				  <li>3</li>
+				</growthAges>
+				<reproduction>
+				  <maleFertilityAgeFactor>
+				   <points>
+					 <li>(2, 0)</li>
+					 <li>(4, 1)</li>
+					 <li>(7, 1)</li>
+					 <li>(30, 0)</li>
+				   </points>
+                </maleFertilityAgeFactor>
+				 <femaleFertilityAgeFactor>
+				  <points>
+					<li>(2, 0)</li>
+					<li>(4, 1)</li>
+					<li>(6, 1)</li>
+					<li>(9, 0.5)</li>
+					<li>(15, 0.1)</li>
+					<li>(20, 0.02)</li>
+					<li>(30, 0)</li>
+				  </points>
+				 </femaleFertilityAgeFactor>
+				</reproduction>
+				<lovinIntervalHoursFromAge>
+				  <points>
+					<li>(4.5, 1.5)</li>
+					<li>(5, 1.5)</li>
+					<li>(7, 4)</li>
+					<li>(10, 12)</li>
+					<li>(15, 36)</li>
+				  </points>
+				</lovinIntervalHoursFromAge>
+			</generalSettings>
+			<styleSettings>
+				<li>
+					<key>BeardDef</key>
+					<value>
+						<hasStyle>false</hasStyle>
+					</value>
+				</li>
+				<li>
+					<key>HairDef</key>
+					<value>
+						<hasStyle>false</hasStyle>
+					</value>
+				</li>
+				<li>
+					<key>TattooDef</key>
+					<value>
+						<hasStyle>false</hasStyle>
+					</value>
+				</li>
+			</styleSettings>
+
+			<!--=============================================================================================================================-->
+			<!--=============================================================================================================================-->
+			<!--=============================================================================================================================-->
+			<!--=============================================================================================================================-->
+			<!--=============================================================================================================================-->
+
+			<!--Graphic Paths-->	 
+			<graphicPaths>
+				<head>Slugcat/Heads/</head>
+				<body>Slugcat/Bodies/</body>
+			</graphicPaths>
+			<!--Thoughts Settings-->
+			<thoughtSettings>
+				<cannotReceiveThoughts>
+                 <li>Naked</li>
+					<li>AteCorpse</li>
+					<li>AteRawFood</li>
+				</cannotReceiveThoughts>
+			</thoughtSettings>
+			
+			<!--Relation Settings-->
+			<!--Restriction Settings-->
+			<raceRestriction>
+			<!--DNA-->
+				<blackGeneList >
+					<li MayRequire="Ludeon.RimWorld.Biotech">Brow_Heavy</li>
+					<li MayRequire="Ludeon.RimWorld.Biotech">FacialRidges</li>
+				</blackGeneList>
+				<blackGeneTags MayRequire="Ludeon.RimWorld.Biotech">
+					<li>SkinColor</li>
+					<li>HairColor</li>
+					<li>EyeColor</li>
+					<li>BodyType</li>
+					<li>Ears</li>
+					<li>Nose</li>
+					<li>Jaw</li>
+					<li>Head</li>
+					<li>Headbone</li>
+					<li>HairStyle</li>
+					<li>BeardStyle</li>
+					<li>SkinColorOverride</li>
+					<li>Fur</li>
+					<li>Tail</li>
+				</blackGeneTags>
+				<blackEndoCategories MayRequire="Ludeon.RimWorld.Biotech">
+					<li>Melanin</li>
+					<li>HairColor</li>
+					<li>Ears</li>
+					<li>Nose</li>
+					<li>Jaw</li>
+					<li>Head</li>
+					<li>BodyType</li>
+				</blackEndoCategories>
+			</raceRestriction>
+		</alienRace>
+		<!--=============================================================================================================================-->
+		<statBases>
+          <MeleeDodgeChance>1.2</MeleeDodgeChance>
+			<MeleeHitChance>1.2</MeleeHitChance>
+          <MarketValue>850</MarketValue>
+			<MentalBreakThreshold>0.25</MentalBreakThreshold>
+          <MoveSpeed>6.0</MoveSpeed>
+          <ComfyTemperatureMin>15</ComfyTemperatureMin>
+          <ComfyTemperatureMax>30</ComfyTemperatureMax>
+	       <WorkSpeedGlobal>1</WorkSpeedGlobal>
+          <PainShockThreshold>0.9</PainShockThreshold>
+		</statBases>
+		<!--=============================================================================================================================-->
+		<tools>
+			<li>
+				<label>left fist</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>6</power>
+				<cooldownTime>1.5</cooldownTime>
+				<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+			</li>
+			<li>
+				<label>right fist</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>6</power>
+				<cooldownTime>1.5</cooldownTime>
+				<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+			</li>
+			<li>
+				<label>head</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>4</power>
+				<cooldownTime>1.5</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+				<chanceFactor>0.1</chanceFactor>
+			</li>
+		</tools>
+		<!--=============================================================================================================================-->
+		<race>
+			<thinkTreeMain>Humanlike</thinkTreeMain>
+			<thinkTreeConstant>HumanlikeConstant</thinkTreeConstant>
+			<intelligence>Humanlike</intelligence>
+			<makesFootprints>true</makesFootprints>
+			<lifeExpectancy>25</lifeExpectancy>
+			<nameCategory>HumanStandard</nameCategory>
+			<body>Body_Slugcat</body>
+			<baseBodySize>0.5</baseBodySize>
+			<baseHealthScale>0.75</baseHealthScale>
+			<foodType>OmnivoreHuman</foodType>
+			<baseHungerRate>0.625</baseHungerRate>
+			<meatMarketValue>3.0</meatMarketValue>
+			<gestationPeriodDays>10</gestationPeriodDays>
+			<manhunterOnDamageChance>0.01</manhunterOnDamageChance>
+			<manhunterOnTameFailChance>0.05</manhunterOnTameFailChance>
+			<litterSizeCurve>
+				<points>
+					<li>(0.5, 0)</li>
+					<li>(1, 1)</li>
+					<li>(2.0, 0.75)</li>
+					<li>(3.0, 0.15)</li>
+					<li>(3.5, 0)</li>
+				</points>
+			</litterSizeCurve>
+			<lifeStageAges>
+				<li>
+					<def>HumanlikeBaby</def>
+					<minAge>0</minAge>
+				</li>
+				<li>
+					<def>HumanlikeChild</def>
+					<minAge>1</minAge>
+				</li>
+				<li MayRequire="Ludeon.RimWorld.Biotech">
+				  <def>HumanlikePreTeenager</def>
+				  <minAge>2</minAge>
+				</li>
+				<li>
+					<def>HumanlikeTeenager</def>
+					<minAge>3</minAge>
+				</li>
+				<li>
+					<def>HumanlikeAdult</def>
+					<minAge>5</minAge>
+				</li>
+			</lifeStageAges> 
+			<ageGenerationCurve>
+				<points>
+					<li MayRequire="Ludeon.RimWorld.Biotech">(0,0)</li>
+					<li MayRequire="Ludeon.RimWorld.Biotech">(0.001,43)</li>
+					<li MayRequire="Ludeon.RimWorld.Biotech">(1,86)</li>
+					<li MayRequire="Ludeon.RimWorld.Biotech">(2,118)</li>  <!-- Exclude 12.5-13 years to avoid spawning pawns who are very close to becoming adults -->  
+					<li MayRequire="Ludeon.RimWorld.Biotech">(2.2,0)</li>  
+					<li MayRequire="Ludeon.RimWorld.Biotech">(3,0)</li>      
+					<li MayRequire="Ludeon.RimWorld.Biotech">(3.001,122)</li><!-- End exclude -->
+					<li MayRequire="Ludeon.RimWorld.Biotech">(3.999,100)</li>
+					<li>(4.5,25)</li>
+					<li>(5,130)</li>
+					<li>(10,70)</li>
+					<li>(15,50)</li>
+					<li>(17.5,30)</li>
+					<li>(20,18)</li>
+					<li>(25,10)</li>
+					<li>(30,3)</li>
+					<li>(40,0)</li>
+				</points>
+			</ageGenerationCurve>
+			<lifeStageWorkSettings MayRequire="Ludeon.RimWorld.Biotech">
+				<Firefighter>3</Firefighter>
+				<Patient>0</Patient>
+				<Doctor>4</Doctor>
+				<PatientBedRest>0</PatientBedRest>
+				<Childcare MayRequire="Ludeon.RimWorld.Biotech">0</Childcare>
+				<BasicWorker>1</BasicWorker>
+				<Warden>4</Warden>
+				<Handling>3</Handling>
+				<Cooking>3</Cooking>
+				<Hunting>3</Hunting>
+				<Construction>4</Construction>
+				<Growing>3</Growing>
+				<Mining>3</Mining>
+				<PlantCutting>3</PlantCutting>
+				<Smithing>5</Smithing>
+				<Tailoring>3</Tailoring>
+				<Art>4</Art>
+				<Crafting>3</Crafting>
+				<Hauling>1</Hauling>
+				<Cleaning>1</Cleaning>
+				<Research>4</Research>
+			</lifeStageWorkSettings>
+			<soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
+			<soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>
+			<soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
+			<specialShadowData>
+				<volume>(0.3, 0.8, 0.4)</volume>
+				<offset>(0,0,-0.3)</offset>
+			</specialShadowData>
+		   <hediffGiverSets>
+			 <li>OrganicStandard</li>
+			 <li>Human</li>
+		   </hediffGiverSets>
+		</race>
+	</AlienRace.ThingDef_AlienRace>
+
+</Defs>
