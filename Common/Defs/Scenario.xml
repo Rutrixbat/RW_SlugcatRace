@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <ScenarioDef>
+        <defName>NewSlugcat</defName>
+        <label>Slugcat tribe</label>
+        <description>A small group of slugcats seperated from their tribe after a storm.\n\nAs you'll start with little resources and no tech, this can be a difficult scenario.</description>
+        <scenario>
+            <summary>A lost group of slugcats. Difficult.</summary>
+            <playerFaction>
+                <def>PlayerFaction</def>
+                <factionDef>Faction_Slugcat</factionDef>
+            </playerFaction>
+			<parts>
+			<li Class="ScenPart_ConfigPage_ConfigureStartingPawns">
+				<def>ConfigPage_ConfigureStartingPawns</def>
+				<pawnCount>4</pawnCount>
+				<pawnChoiceCount>8</pawnChoiceCount>
+			</li>
+			<li Class="ScenPart_PlayerPawnsArriveMethod">
+				<def>PlayerPawnsArriveMethod</def>
+				<method>Standing</method>
+			</li>
+			<li Class="ScenPart_Naked">
+				<def>Naked</def>
+				<context>PlayerStarter</context>
+			</li>
+			<li Class="ScenPart_ForcedHediff">
+				<def>ForcedHediff</def>
+				<chance>0.5</chance>
+				<context>PlayerStarter</context>
+				<hediff>Hypothermia</hediff>
+				<severityRange>0.2~0.5</severityRange>
+			</li>
+			<li Class="ScenPart_SetNeedLevel">
+				<def>SetNeedLevel</def>
+				<chance>0.5</chance>
+				<need>Food</need>
+				<levelRange>0.30~0.70</levelRange>
+			</li>
+			<li Class="ScenPart_ForcedHediff">
+				<def>ForcedHediff</def>
+				<chance>0.33</chance>
+				<context>PlayerStarter</context>
+				<hediff>Malnutrition</hediff>
+				<severityRange>0.1~0.25</severityRange>
+			</li>
+          <li Class="ScenPart_StartingThing_Defined">
+				<def>StartingThing_Defined</def>
+				<thingDef>Pemmican</thingDef>
+				<count>500</count>
+          </li>
+			<li Class="ScenPart_GameStartDialog">
+			<def>GameStartDialog</def>
+			<text>The skys were clear when you went out to forage. When the storms rolled over, you lost the food you gathered and the path back home. Here, together, you'll have to start again.</text>
+			<closeSound>GameStartSting</closeSound>
+			</li>
+			</parts>
+        </scenario>
+    </ScenarioDef>
+	
+    <ScenarioDef>
+        <defName>LostSlugcat</defName>
+        <label>Lost slugcat</label>
+        <description>A single, young slugcat, seperated from their famliy and now lost, cold, hungry and alone.\n\nYou start alone, cold, with absolutly nothing, and with constant manhunters on the way. There is nothing fair about this scenario.</description>
+        <scenario>
+            <summary>A single slugcat, lost, cold and alone. Deeply unfair.</summary>
+            <playerFaction>
+                <def>PlayerFaction</def>
+                <factionDef>Faction_Slugcat</factionDef>
+            </playerFaction>
+			<parts>
+			<li Class="ScenPart_ConfigPage_ConfigureStartingPawns">
+				<def>ConfigPage_ConfigureStartingPawns</def>
+				<pawnCount>1</pawnCount>
+				<pawnChoiceCount>8</pawnChoiceCount>
+			</li>
+			<li Class="ScenPart_PlayerPawnsArriveMethod">
+				<def>PlayerPawnsArriveMethod</def>
+				<method>Standing</method>
+			</li>
+			<li Class="ScenPart_PawnFilter_Age">
+				<def>PawnFilter_Age</def>
+				<allowedAgeRange>4~6</allowedAgeRange>
+			</li>
+			<li Class="ScenPart_Naked">
+				<def>Naked</def>
+				<context>PlayerStarter</context>
+			</li>
+			<li Class="ScenPart_SetNeedLevel">
+				<def>SetNeedLevel</def>
+				<chance>1</chance>
+				<need>Food</need>
+				<levelRange>0.20~0.40</levelRange>
+			</li>
+			<li Class="ScenPart_SetNeedLevel">
+				<def>SetNeedLevel</def>
+				<chance>1</chance>
+				<need>Rest</need>
+				<levelRange>0.45~0.70</levelRange>
+			</li>
+			<li Class="ScenPart_ForcedHediff">
+				<def>ForcedHediff</def>
+				<chance>1</chance>
+				<context>PlayerStarter</context>
+				<hediff>Hypothermia</hediff>
+				<severityRange>0.50~0.70</severityRange>
+			</li>
+			<li Class="ScenPart_ForcedHediff">
+				<def>ForcedHediff</def>
+				<chance>1</chance>
+				<context>PlayerStarter</context>
+				<hediff>Malnutrition</hediff>
+				<severityRange>0.10~0.30</severityRange>
+			</li>
+			<li Class="ScenPart_CreateIncident">
+				<def>CreateIncident</def>
+				<incident>ManhunterPack</incident>
+				<intervalDays>3</intervalDays>
+			</li>	
+			<li Class="ScenPart_CreateIncident">
+				<def>CreateIncident</def>
+				<incident>ManhunterPack</incident>
+				<intervalDays>15</intervalDays>
+				<repeat>True</repeat>
+			</li>			
+			<li Class="ScenPart_DisableIncident">
+				<def>DisableIncident</def>
+				<incident>StrangerInBlackJoin</incident>
+			</li>
+			<li Class="ScenPart_DisableIncident">
+				<def>DisableIncident</def>
+				<incident>WandererJoin</incident>
+			</li>
+			<li Class="ScenPart_GameStartDialog">
+			<def>GameStartDialog</def>
+			<text>Your head rings, and rain soaks your fur. You remember falling, then sinking, and then waking up here. Alone.\n\nYou're hungry and cold, and any predator out there's looking for an easy meal. Keep your wits about you, little slugcat.</text>
+			<closeSound>GameStartSting</closeSound>
+			</li>
+			</parts>
+        </scenario>
+    </ScenarioDef>
+
+</Defs>

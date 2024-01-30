@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>  
+	<BodyPartDef>
+   	 <defName>Tail_Slugcat</defName>
+   	 <label>tail</label>
+   	 <hitPoints>30</hitPoints>
+   	 <frostbiteVulnerability>0.1</frostbiteVulnerability>
+   	 <skinCovered>true</skinCovered>
+   	 <beautyRelated>false</beautyRelated>
+	</BodyPartDef>
+</Defs>

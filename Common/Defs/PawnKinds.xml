@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!-- player -->
+	<PawnKindDef ParentName="BasePlayerPawnKind">
+		<defName>Kind_Slugcat</defName>
+		<label>slugcat</label>
+		<race>Alien_Slugcat</race>
+		<defaultFactionType>Faction_Slugcat</defaultFactionType>
+        <backstoryCategories>
+            <li>Tribal</li>
+        </backstoryCategories>
+		<isFighter>false</isFighter>
+		<apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+		<forceNormalGearQuality>true</forceNormalGearQuality>
+		<apparelColor>(1,1,1)</apparelColor>
+		<apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
+		<backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
+		<initialWillRange>0~1</initialWillRange>
+		<initialResistanceRange>20~30</initialResistanceRange>
+	</PawnKindDef>
+</Defs>
+
+

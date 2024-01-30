@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<FactionDef ParentName="PlayerFactionBase">
+		<defName>Faction_Slugcat</defName>
+		<label>Slugcat tribe</label>
+		<description>A communal tribe of small, slug-like creatures.</description>
+		<isPlayer>true</isPlayer>
+		<basicMemberKind>Kind_Slugcat</basicMemberKind>
+		<pawnSingular>slugcat</pawnSingular>
+		<pawnsPlural>slugcats</pawnsPlural>
+		<techLevel>Animal</techLevel>
+        <backstoryCategories>
+            <li>Tribal</li>
+        </backstoryCategories>
+		<settlementTexturePath>World/WorldObjects/DefaultSettlement</settlementTexturePath>
+		<factionIconPath>Slugcat_Faction</factionIconPath>
+		<colorSpectrum>
+			<li>(1.0, 0.75, 0.0)</li>
+		</colorSpectrum>
+		<playerInitialSettlementNameMaker>NamerInitialSettlementColony</playerInitialSettlementNameMaker>
+		<factionNameMaker>NamerFactionTribal</factionNameMaker>
+		<settlementNameMaker>NamerSettlementOutlander</settlementNameMaker>
+		<geneticVariance>1</geneticVariance>
+		<allowedCultures><li>Culture_Slugcat</li></allowedCultures>
+	</FactionDef>
+</Defs>
