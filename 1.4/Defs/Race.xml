@@ -151,9 +151,16 @@
 			<!--Thoughts Settings-->
 			<thoughtSettings>
 				<cannotReceiveThoughts>
-                 <li>Naked</li>
-					<li>AteCorpse</li>
+                    			<li>Naked</li>
+					<li>AteWithoutTable</li>
 					<li>AteRawFood</li>
+					<li>AteKibble</li>
+					<li>AteCorpse</li>
+					<li>AteHumanlikeMeatDirect</li>
+					<li>AteHumanlikeMeatAsIngredient</li>
+					<li>AteInsectMeatDirect</li>
+					<li>AteInsectMeatAsIngredient</li>
+					<li>SoakingWet</li>
 				</cannotReceiveThoughts>
 			</thoughtSettings>
 			
